@@ -1,0 +1,19 @@
+$ 1 0.0000049999999999999996 10.20027730826997 50 5 43 5e-11
+R 800 176 800 112 0 0 40 13 0 0 0.5
+t 832 224 976 224 0 1 -2.120991892242861 0.6600486606331568 100 default
+r 800 176 832 224 0 1000
+R 976 208 976 128 0 0 40 15 0 0 0.5
+r 976 240 976 336 0 1000
+g 976 352 976 384 0 0
+w 976 352 976 336 0
+p 1056 256 1056 336 3 0 0 10000000
+w 1056 256 976 240 0
+w 976 336 1056 336 0
+x 1129 140 1483 143 4 30 <<<\svary\sC\sand\sE\svoltages
+x 792 84 856 87 4 24 BASE
+x 961 90 1107 93 4 24 COLLECTOR
+x 351 506 1311 509 4 24 If\sbase\sV\sis\sa\sdiode\sdrop\sor\smore\sthan\scollector,\semitter\svoltage\sis\sclose\sto\scollector\svoltage
+x 488 536 1023 539 4 24 Transistor\sis\ssaturated,\sC\s>\sE\sacts\sa\slot\slike\sa\sshort
+x 306 677 1263 680 4 24 If\sbase\s<\sthan\sa\sdiode\sdrop\sbelow\scollector,\semitter\svoltage\sis\sbase\sless\s.7\s-\s.9V\sdiode\sdrop
+x 580 563 960 566 4 24 current\sflows\sB\sto\sC\sbut\salso\sC\sto\sE\s
+x 256 238 781 241 4 24 EXERCISE.\s\sHow\sdoes\sB\sand\sC\simpact\sE\svoltage

@@ -1,0 +1,66 @@
+Restoring Falstad simulations from text exports
+
+Created: 5/28/2026 7:48:40
+Updated: 5/28/2026 7:49:00
+Exported: 5/28/2026 7:50:33
+Link: https://claude.ai/chat/d77abd4e-c06b-46ee-88d1-80f49e1dff98
+
+User:
+
+5/28/2026 7:48:41
+
+I use falstad for quick electronics simulations.  Problem is to save my work I have to export it as text.  OK now I have a lot of text files.  Is there a way to quickly restore the work?  Like a way to spin up the falstad site locally then restore the text data?  Is there another option I am missing?
+
+Assistant:
+
+5/28/2026 7:49:00
+
+Good question — and you're not missing anything obvious, but there are a few paths worth knowing about.
+
+Searched the web
+
+falstad circuit simulator run locally offline github
+
+Done
+
+Here's the lay of the land — there are basically three approaches, ordered from least to most effort:
+
+1. Just keep using the web version with drag-and-drop import
+
+This is what most people miss. On falstad.com/circuit you don't have to paste text into the import dialog — you can drag a .txt (or .circuitjs.txt) file directly onto the canvas and it loads the circuit. So your existing text files already are your saved circuits; "restoring" is one drag. If you rename them with a consistent extension and keep them in a folder, it's basically the same workflow as opening native files.
+
+2. Run Falstad offline as a desktop app
+
+Paul Falstad himself distributes an offline build at falstad.com/circuit/offline/, and there's a more polished cross-platform NW.js-based packaging by Usevalad Khatkevich (Windows x32/x64, Linux x32/x64, macOS x64/arm64) — source at https://github.com/SEVA77/circuitjs1. Drag-drop import works the same way there. This is the right answer if you want guaranteed access regardless of what happens to the hosted site.
+
+3. Self-host the web version
+
+The real upstream is https://github.com/pfalstad/circuitjs1. Build with mvn install, then it runs a local web server on http://localhost:8000. Only worth it if you want to modify the simulator itself; for just loading your files it's overkill.
+
+The thing you might actually be missing: Falstad supports URL-based circuit sharing. If you URL-encode the contents of a text file and append it as ?ctz=<encoded> (compressed) or use the dump format, you can make a clickable index — an HTML file with links, each link opening a circuit directly in falstad.com. There's a "Export Link" option in the File menu that produces exactly this URL for any open circuit. So one option is: open each text file once, grab the link, and build yourself a little bookmarks page. Then "restore" is a single click per circuit, no import dialog at all.
+
+For a library of files, I'd go with option 1 (drag-drop) for daily use plus option 2 (offline build) as a backup. Want me to write a tiny HTML index generator that scans a folder of .txt files and produces a clickable list?
+
+Sources:
+
+Falstad's Circuit Simulator
+
+GitHub - csparkresearch/circuitsimulator: standalone (offline) version of the Circuit Simulator based on NW.js.
+
+GitHub - SEVA77/circuitjs1: Standalone (offline) version of the Circuit Simulator with small modifications based on modified NW.js. · GitHub
+
+GitHub - appsedu/circuit-simulator: This is a fork from Paul Falstad's Project · GitHub
+
+GitHub - Dragocytus/circuitjs1-1: This is my variant of standalone (offline) version of the Circuit Simulator based on NW.js. · GitHub
+
+GitHub - wa1tnr/falstadCircSimApps-a: Falstad Circuit Simulator - code/apps - electronic circuit simulation, practical examples locally authored
+
+GitHub - binary-person/falstad-simulator-offline-html5: Basically just a recreated version of Falstad Simulator: http://falstad.com/circuit/circuitjs.html only that it is accessible offline, and without having to compile GWT
+
+[SOLVED] how to install this program (circuitjs, da Falstad)? - Linux Mint Forums
+
+github.com
+
+github.com
+
+Powered by Claude Exporter (https://www.ai-chat-exporter.net)
