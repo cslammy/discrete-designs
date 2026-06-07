@@ -1,0 +1,23 @@
+<cir f="1" ts="0.0000049999999999999996" ic="10.20027730826997" cb="50" pb="43" vr="5" mts="5e-11">
+  <R x="800 176 800 112" f="0" wf="0" maxv="30"/>
+  <t x="832 224 976 224" f="0" pn="1" be="100" mo="default" vbe="0.6945211951148167" vbc="0.703619959953631"/>
+  <r x="800 176 832 224" f="0" r="200"/>
+  <R x="976 208 976 128" f="0" wf="0" maxv="20"/>
+  <g x="976 352 976 384" f="0"/>
+  <w x="976 352 976 336" f="0"/>
+  <p x="1056 256 1056 336" f="3" me="0" sc="0" re="10000000"/>
+  <w x="1056 256 976 240" f="0"/>
+  <w x="976 336 1056 336" f="0"/>
+  <x x="1129 140 1418 143" f="4" si="30" te="&amp;lt;&amp;lt;&amp;lt; vary B, C voltage"/>
+  <x x="792 84 856 87" f="4" si="24" te="BASE"/>
+  <x x="961 90 1107 93" f="4" si="24" te="COLLECTOR"/>
+  <x x="351 506 1282 509" f="4" si="24" te="If base V is substantially more than collector, emitter voltage is close to collector voltage"/>
+  <x x="488 536 1302 539" f="4" si="24" te="Transistor is saturated, C &gt; E acts a lot like a small resistor between E and C"/>
+  <x x="306 677 1263 680" f="4" si="24" te="If base &amp;lt; than a diode drop below collector, emitter voltage is base less .7 - .9V diode drop"/>
+  <x x="580 563 960 566" f="4" si="24" te="current flows B to C but also C to E "/>
+  <x x="256 238 704 241" f="4" si="24" te="EXERCISE.  How does B and C impact E "/>
+  <x x="1077 268 1208 271" f="4" si="30" te="EMITTER"/>
+  <Ammeter x="976 240 976 288" f="3" me="0" sc="0"/>
+  <r x="976 288 976 336" f="0" r="1000"/>
+  <x x="345 699 1035 702" f="4" si="24" te="BJT is in active mode; C &gt; E acts like variable non-linear resistor."/>
+</cir>
